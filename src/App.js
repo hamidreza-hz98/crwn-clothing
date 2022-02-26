@@ -8,7 +8,8 @@ import ShopPage from "./pages/ShopPage/ShopPage";
 import Header from "./components/Header/Header";
 import SignInAndSignUpPage from "./pages/SignInAndSignUpPage/SignInAndSignUpPage";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import {selectCurrentUser} from './redux/user/userSelector'
+import { selectCurrentUser } from "./redux/user/userSelector";
+
 import { createStructuredSelector } from "reselect";
 import CheckoutPage from "./pages/Checkout/CheckoutPage";
 
@@ -43,7 +44,7 @@ class App extends React.Component {
           <Route
             exact
             path="/signin"
-            render={() => 
+            render={() =>
               this.props.currentUser ? (
                 <Redirect to="/" />
               ) : (
